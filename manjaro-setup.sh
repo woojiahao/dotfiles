@@ -5,19 +5,13 @@
 aur_download () {
   cd ~/Downloads/
   AUR="https://aur.archlinux.org/$1.git"
-  git clone AUR \
-  && cd $1 \ 
-  && makepkg -sic \ 
-  && cd .. \ 
-  && rm -r $1 
+  git clone AUR && cd $1 && makepkg -sic && cd .. && rm -r $1 
 }
 
 # Update packages first to prevent errors
 pacman -Syuu
 # Install all applications compatible with pacman
-pacman -S vim snapd jre11-openjdk jdk11-openjdk openjdk11-doc gcc make linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers \
-&& systemctl enable --now snapd.socket \
-&& ln -s /var/lib/snapd/snap /snap
+pacman -S vim snapd jre11-openjdk jdk11-openjdk openjdk11-doc gcc make linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
 
 # Install all applicatons found in the AUR
 aur_download "google-chrome"
