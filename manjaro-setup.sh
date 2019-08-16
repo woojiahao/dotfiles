@@ -3,16 +3,16 @@
 # This function is to retrieve an AUR package and install it 
 aur_download () {
   AUR="https://aur.archlinux.org/$1.git"
-  git clone $AUR && cd $1 && makepkg -sic && cd .. && sudo rm -rf $1 
+  git clone $AUR && cd $1 && makepkg -sic --noconfirm && cd .. && sudo rm -rf $1 
 }
 
 # Update packages first to prevent errors
 sudo pacman -Syuu
 # Install all applications compatible with pacman
 # TODO: Create script to setup postgresql
-sudo pacman -S vim jre11-openjdk jdk11-openjdk openjdk11-doc telegram-desktop libreoffice-still gimp gcc make docker
-sudo pacman -S linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers
-sudo pacman -S snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
+sudo pacman -S --noconfirm vim jre11-openjdk jdk11-openjdk openjdk11-doc telegram-desktop libreoffice-still gimp gcc make docker
+sudo pacman -S --noconfirm linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers
+sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
 
 # Install all applicatons found in the AUR
 aur_download "google-chrome"
