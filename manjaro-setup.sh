@@ -9,6 +9,7 @@ aur_download () {
 # Update packages first to prevent errors
 sudo pacman -Syuu
 # Install all applications compatible with pacman
+# Set up should not display prompts
 # TODO: Create script to setup postgresql
 sudo pacman -S --noconfirm base-devel vim jre11-openjdk jdk11-openjdk openjdk11-doc telegram-desktop libreoffice-still gimp gcc make docker noto-fonts-emoji discord
 sudo pacman -S --noconfirm linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers
