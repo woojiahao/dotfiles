@@ -25,3 +25,7 @@ These are a collection of scripts to install various software that I use most fr
    ```bash
    $ sudo sh manjaro-setup.sh
    ```
+
+## TODO
+1. Script to set up postgres
+2. Script to set up wally for ergodox
