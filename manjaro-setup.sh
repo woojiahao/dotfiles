@@ -16,19 +16,16 @@ sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s
 
 # Install all applicatons found in the AUR
 aur_download "google-chrome"
-aur_download "discord-canary"
 aur_download "jetbrains-toolbox"
 aur_download "visual-studio-code-bin"
-aur_download "spotify"
 aur_download "postman"
 aur_download "imagewriter"
 aur_download "skypeforlinux-stable-bin"
 
 # Install all applications found in snap 
-pacman -Qi snapd
-if [ $? -eq 0 ]; then
-  sudo snap install slack --classic
-fi 
+sudo snap install slack --classic
+sudo snap install discord-bartixxx
+sudo snap install spotify
 
 # Reboot OS
 sudo reboot
