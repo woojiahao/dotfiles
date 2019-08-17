@@ -10,7 +10,7 @@ aur_download () {
 sudo pacman -Syuu
 # Install all applications compatible with pacman
 # TODO: Create script to setup postgresql
-sudo pacman -S --noconfirm vim jre11-openjdk jdk11-openjdk openjdk11-doc telegram-desktop libreoffice-still gimp gcc make docker
+sudo pacman -S --noconfirm base-devel vim jre11-openjdk jdk11-openjdk openjdk11-doc telegram-desktop libreoffice-still gimp gcc make docker noto-fonts-emoji discord
 sudo pacman -S --noconfirm linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers
 sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
 
@@ -21,10 +21,9 @@ aur_download "visual-studio-code-bin"
 aur_download "postman"
 aur_download "imagewriter"
 aur_download "skypeforlinux-stable-bin"
+aur_download "slack-desktop"
 
 # Install all applications found in snap 
-sudo snap install slack --classic
-sudo snap install discord-bartixxx
 sudo snap install spotify
 
 # Reboot OS
