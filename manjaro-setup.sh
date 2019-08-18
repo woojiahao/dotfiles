@@ -11,9 +11,13 @@ sudo pacman -Syuu
 # Install all applications compatible with pacman
 # Set up should not display prompts
 # TODO: Create script to setup postgresql
-sudo pacman -S --noconfirm base-devel vim jre11-openjdk jdk11-openjdk openjdk11-doc telegram-desktop libreoffice-still gimp gcc make docker noto-fonts-emoji discord xclip neofetch ruby ruby-irb
+sudo pacman -S --noconfirm base-devel vim jre11-openjdk jdk11-openjdk openjdk11-doc telegram-desktop libreoffice-still gimp gcc make docker noto-fonts-emoji discord xclip neofetch
 sudo pacman -S --noconfirm linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers
 sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
+
+# Install ruby and add to PATH 
+sudo pacman -S ruby ruby-irb
+sudo export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 # Install all applicatons found in the AUR
 aur_download "google-chrome"
