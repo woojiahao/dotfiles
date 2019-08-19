@@ -16,7 +16,7 @@ sudo pacman -S --noconfirm linux$(uname -r|sed 's/\W//g'|cut -c1-3)-headers
 sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
 
 # Set up Docker (Sets the docker service to run on boot too)
-sudo pacman -S docker
+sudo pacman -S docker docker-machine docker-compose
 systemctl start docker
 systemctl enable docker
 sudo gpasswd -a $USERNAME docker
