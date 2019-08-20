@@ -30,14 +30,14 @@ sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s
 
 # Set up Docker (Sets the docker service to run on boot too)
 echo "Installing Docker"
-sudo pacman -S docker docker-machine docker-compose
+sudo pacman -S --noconfirm docker docker-machine docker-compose
 systemctl start docker
 systemctl enable docker
 sudo gpasswd -a $USERNAME docker
 
 # Set up Ruby
 echo "Installing Ruby"
-sudo pacman -S ruby ruby-irb
+sudo pacman -S --noconfirm ruby ruby-irb
 sudo export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 # Install all applicatons found in the AUR
