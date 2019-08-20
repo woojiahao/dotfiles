@@ -2,12 +2,17 @@
 # This is the installation script for all the software used for Manjaro
 # This function is to retrieve an AUR package and install it 
 aur_download () {
-  AUR="https://aur.archlinux.org/$1.git"
-  git clone $AUR 
-  cd $1 
-  makepkg -sic --noconfirm 
-  cd .. 
-  sudo rm -rf $1 
+  if [ -z $1 ]
+  then 
+    echo "AUR package name must be provided"
+  else 
+    AUR="https://aur.archlinux.org/$1.git"
+    git clone $AUR
+    cd $1
+    makepkg -sic --noconfirm 
+    cd .. 
+    sudo rm -rf $1 
+  fi 
 }
 
 # Update packages first to prevent errors
