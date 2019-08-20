@@ -25,7 +25,7 @@ archlinux-java set java-11-openjdk
 
 # Install all the basic applications
 echo "Installing basic application"
-sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch
+sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc
 sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
 
 # Set up Docker (Sets the docker service to run on boot too)
