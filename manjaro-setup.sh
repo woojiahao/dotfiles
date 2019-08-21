@@ -25,12 +25,12 @@ sudo pacman -S --noconfirm base-devel gcc make linux$(uname -r|sed 's/\W//g'|cut
 
 # Install both Java 8 and 11 - use Java 11 as default while Java 8 is used for development purposes
 echo "Installing Java 8 & 11 and set Java 11 as default"
-sudo pacman -S --noconfirm jre8-openjdk jdk8-openjdk openjdk8-doc jre11-openjdk jdk11-openjdk openjdk11-doc python-pip
+sudo pacman -S --noconfirm jre8-openjdk jdk8-openjdk openjdk8-doc jre11-openjdk jdk11-openjdk openjdk11-doc
 archlinux-java set java-11-openjdk
 
 # Install all the basic applications
 echo "Installing basic application"
-sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc
+sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip heroku-cli
 sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
 
 # Set up Docker (Sets the docker service to run on boot too)
