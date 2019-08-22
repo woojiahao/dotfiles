@@ -30,7 +30,7 @@ archlinux-java set java-11-openjdk
 
 # Install all the basic applications
 echo "Installing basic application"
-sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip heroku-cli
+sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip
 sudo pacman -S --noconfirm snapd && systemctl enable --now snapd.socket && ln -s /var/lib/snapd/snap /snap
 
 # Set up Docker (Sets the docker service to run on boot too)
@@ -53,6 +53,7 @@ aur_download "postman"
 aur_download "imagewriter"
 aur_download "skypeforlinux-stable-bin"
 aur_download "slack-desktop"
+aur_download "heroku-cli"
 
 # Install all applications found in snap 
 sudo snap install spotify
