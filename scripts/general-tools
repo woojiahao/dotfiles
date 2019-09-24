@@ -1,0 +1,20 @@
+#!/bin/bash
+# List of general commands - to be loaded on shell start
+
+# Detailed ls command
+alias ls="ls -la --color"
+
+# Launch VS Code with scale factor forced
+alias code="code --force-device-scaled-factor=1.2"
+
+# Syncs .zshrc to reload the utility scripts available
+alias sync="source ~/.zshrc"
+
+# Clears contents of a folder
+alias clear-folder="rm -rf ./*"
+
+# Create a new directory and cd into it
+function newdir {
+  mkdir $1
+  cd $1
+}
