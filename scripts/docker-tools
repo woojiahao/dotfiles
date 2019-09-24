@@ -1,0 +1,8 @@
+#!/bin/bash
+# Docker commands - to be added on shell start
+
+# Short form for "docker container"
+alias dkcon="docker container"
+
+# Short form for "docker image"
+alias dkimg="docker image"
