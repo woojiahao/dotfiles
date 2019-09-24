@@ -1,0 +1,13 @@
+#!/bin/bash
+# Git commands - to be added on shell start
+
+# Merges master/origin and deletes local branch
+function merge-branch {
+  git checkout master
+  git fetch origin master
+  git merge origin/master
+  git branch -d "$1"
+}
+
+# Display detailed version of git log
+alias log="git log --oneline --graph"
