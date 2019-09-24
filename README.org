@@ -1,4 +1,3 @@
-# Linux scripts
 * Linux Scripts
   These are a collection of scripts to install various software that I use most frequently.
 
@@ -8,14 +7,25 @@
 
 ** Installation
    1. Clone this repository and navigate to the folder
+      #+begin_src bash
+        git clone https://github.com/woojiahao/linux.git
+      #+end_src
+
+   2. Change the permissions of the =setup= script
+      #+begin_src bash
+        chmod +x setup
+      #+end_src
+
+   3. Run the =setup= script as root
+      #+begin_src bash
+        sudo ./setupp
+      #+end_src
+
+** Loading commands
+   In order to keep the shell files clean, commands/alias are loaded from the =/scripts= folder. To add these scripts, add the following command to the end of your =.bashrc= or =.zshrc=.
+
    #+begin_src bash
-     git clone https://github.com/woojiahao/linux.git
-   #+end_src
-   1. Change the permissions of the =setup= script
-   #+begin_src bash
-     chmod +x setup
-   #+end_src
-   1. Run the =setup= script as root
-   #+begin_src bash
-     sudo ./setupp
+     for file in ~/linux/scripts/*; do
+       source $file
+     done
    #+end_src
