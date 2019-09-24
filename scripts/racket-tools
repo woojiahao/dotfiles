@@ -1,0 +1,10 @@
+#!/bin/bash
+# Racket commands - to be added on shell start
+
+# Create new racket source file
+function newrkt {
+  racket-file="$1.rkt"
+  touch $racket-file
+  echo "#!/usr/bin/racket" >> $racket-file
+  echo "#lang racket" >> $racket-file
+}
