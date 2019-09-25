@@ -1,0 +1,26 @@
+#!/usr/bin/expect -f
+
+lassign $argv name version description entry_point test_command git keywords author license
+
+spawn npm init
+expect "package name:"
+send "$name\n"
+expect "version:"
+send "$version\n"
+expect "description:"
+send "$description\n"
+expect "entry point:"
+send "$entry_point\n"
+expect "test command:"
+send "$test_command\n"
+expect "git repository"
+send "$git\n"
+expect "keywords:"
+send "$keywords\n"
+expect "author:"
+send "$author\n"
+expect "license:"
+send "$license\n"
+expect "Is this OK?"
+send "yes\n"
+expect eof
