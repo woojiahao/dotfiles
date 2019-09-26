@@ -1,6 +1,11 @@
 #!/usr/bin/expect -f
 
 lassign $argv name version description entry_point test_command git keywords author license
+set description [string trim $description]
+set test_command [string trim $test_command]
+set git [string trim $git]
+set keywords [string trim $keywords]
+set author [string trim $author]
 
 spawn npm init
 expect "package name:"
