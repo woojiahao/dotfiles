@@ -1,0 +1,74 @@
+#!/bin/bash
+# Typescript commands - to be loaded on shell start
+
+# Reads user input and defaults to value if user input is blank
+function default-read {
+  default=$2
+  prompt="$1 ($default) >>> "
+  if [[ -z $(echo $default | sed 's/ *$//g') ]]; then
+    prompt="$1 >>> "
+  fi
+
+  read "input?$prompt"
+  if [[ -z $input ]]; then
+    echo $default
+  else
+    echo $input
+  fi
+}
+
+# Initializes a node project
+function npminit {
+  name=$(default-read "Name" ${PWD##*/})
+  version=$(default-read "Version" "1.0.0")
+  description=$(default-read "Description" " ")
+  entry_point=$(default-read "Entry point" "./dist/$1")
+  test_command=$(default-read "Test command" " ")
+  git=$(default-read "Git repository" " ")
+  keywords=$(default-read "Keywords" " ")
+  author=$(default-read "Author" " ")
+  license=$(default-read "License" "ISC")
+
+  chmod +x ~/linux/scripts/expect/npm-init-expect
+  ~/linux/scripts/expect/npm-init-expect $name $version $description $entry_point $test_command $git $keywords $author $license
+}
+
+# Creates a new Typescript project
+function tsinit {
+  main_file_name="main"
+  read "temp_main_file_name?Enter the main typescript file name (main) >>> "
+  if [[ ! -z $temp_main_file_name ]]; then
+    main_file_name=$temp_main_file_name
+  fi
+
+  ts_main="$main_file_name.ts"
+  js_main="$main_file_name.js"
+
+  mkdir src/ dist/
+
+  npminit $js_main
+  npm list -g | grep gulp-cli || sudo npm install -g gulp-cli
+
+  read "load_option?Would you like to create an a) Node project b) Node + Browser project? >>> "
+  if [[ $load_option =~ ^[aA]$ ]]; then
+    node-setup $ts_main $js_main
+  elif [[ $load_option =~ ^[bB]$ ]]; then
+    browser-setup $ts_main $js_main
+  else
+    echo "Invalid option entered, try again"
+  fi
+}
+
+function node-setup {
+  npm install --save-dev typescript gulp gulp-typescript
+  cp ~/snippets/main-node.ts ./src/$1
+  cp ~/snippets/tsconfig-node.json ./tsconfig.json
+  sed -i "s/MAIN_FILE/$1/g" ./tsconfig.json
+  cp ~/snippets/gulpfile-node.js ./gulpfile.js
+  gulp
+  node ./dist/$2
+}
+
+function browser-setup {
+  echo "Hello world"
+}
