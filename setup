@@ -11,6 +11,7 @@ aur() {
     done
   fi
 }
+
 aur_download () {
   if [ -z $1 ]; then
     echo "AUR package name must be provided"
@@ -57,7 +58,11 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 cp -f .spacemacs ../.spacemacs
 
 # Install all applicatons found in the AUR
+echo "Installing AUR packages"
 aur "yay" "google-chrome" "jetbrains-toolbox" "visual-studio-code-bin" "postman" "heroku-cli"
+
+echo "Clearing unused packages"
+sudo pacman -Rcns --noconfirm firefox
 
 # Reboot OS
 sudo reboot
