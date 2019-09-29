@@ -2,14 +2,14 @@
 # This is the installation script for all the software used for Manjaro
 # This function is to retrieve an AUR package and install it
 aur() {
-    if [[ -z $1 ]]; then
-        echo "At least one package must be provided"
-    else
-        for var in "$@"
-        do
-            aur_download "$var"
-        done
-    fi
+  if [[ -z $1 ]]; then
+    echo "At least one package must be provided"
+  else
+    for var in "$@"
+    do
+      aur_download "$var"
+    done
+  fi
 }
 aur_download () {
   if [ -z $1 ]; then
