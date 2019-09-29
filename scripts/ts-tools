@@ -29,8 +29,8 @@ function npminit {
   author=$(default-read "Author" " ")
   license=$(default-read "License" "ISC")
 
-  chmod +x ~/linux/scripts/expect/npm-init-expect
-  ~/linux/scripts/expect/npm-init-expect $name $version $description $entry_point $test_command $git $keywords $author $license
+  chmod +x $LINUX_EXPECT/npm-init-expect
+  $LINUX_EXPECT/npm-init-expect $name $version $description $entry_point $test_command $git $keywords $author $license
 }
 
 # Creates a new Typescript project
@@ -44,31 +44,40 @@ function tsinit {
   ts_main="$main_file_name.ts"
   js_main="$main_file_name.js"
 
-  mkdir src/ dist/
-
   npminit $js_main
+
+  mkdir src/ dist/
   npm list -g | grep gulp-cli || sudo npm install -g gulp-cli
 
-  read "load_option?Would you like to create an a) Node project b) Node + Browser project? >>> "
+  echo "Would you like to create a new"
+  echo "a) Node project"
+  echo "b) Node + Browser project"
+  read "load_option?Project type selection >>> "
   if [[ $load_option =~ ^[aA]$ ]]; then
     node-setup $ts_main $js_main
   elif [[ $load_option =~ ^[bB]$ ]]; then
     browser-setup $ts_main $js_main
   else
-    echo "Invalid option entered, try again"
+    echo "Invalid option entered"
   fi
 }
 
 function node-setup {
   npm install --save-dev typescript gulp gulp-typescript
-  cp ~/snippets/main-node.ts ./src/$1
-  cp ~/snippets/tsconfig-node.json ./tsconfig.json
+  cp $SNIPPETS/main-node.ts ./src/$1
+  cp $SNIPPETS/tsconfig-node.json ./tsconfig.json
   sed -i "s/MAIN_FILE/$1/g" ./tsconfig.json
-  cp ~/snippets/gulpfile-node.js ./gulpfile.js
+  cp $SNIPPETS/gulpfile-node.js ./gulpfile.js
   gulp
   node ./dist/$2
 }
 
 function browser-setup {
-  echo "Hello world"
+  npm install --save-dev typescript gulp gulp-typescript browserify tsify vinyl-source-stream watchify fancy-log
+  cp $SNIPPETS/index-browser.html ./src/index.html
+  cp $SNIPPETS/main-browser.ts ./src/$1
+  cp $SNIPPETS/gulpfile-browser.js ./gulpfile.js
+  cp $SNIPPETS/tsconfig-browser.json ./tsconfig.json
+  cp $SNIPPETS/greet-browser.ts ./src/greet.ts
+  sed -i "s/MAIN_FILE/$1/g" ./tsconfig.json
 }
