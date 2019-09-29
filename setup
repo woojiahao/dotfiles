@@ -57,7 +57,7 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 cp -f .spacemacs ../.spacemacs
 
 # Install all applicatons found in the AUR
-aur "yay" "google-chrome" "jetbrains-toolbox" "visual-studio-code-bin" "postman" "skypeforlinux-stable-bin" "slack-desktop" "heroku-cli"
+aur "yay" "google-chrome" "jetbrains-toolbox" "visual-studio-code-bin" "postman" "heroku-cli"
 
 # Reboot OS
 sudo reboot
