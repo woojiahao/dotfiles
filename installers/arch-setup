@@ -70,5 +70,9 @@ aur "yay" "google-chrome" "jetbrains-toolbox" "visual-studio-code-bin" "postman"
 echo "Clearing unused packages"
 sudo pacman -Rcns --noconfirm firefox
 
+# Copy code snippets folder to home
+echo "Adding code snippets"
+cp -r ~/dotfiles/snippets/ ~/snippets/
+
 # Reboot OS
 sudo reboot
