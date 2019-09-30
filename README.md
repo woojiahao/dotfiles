@@ -1,4 +1,6 @@
 # Dotfiles
+![](./res/emacs-preview.png)
+
 My dotfiles for various application configurations on Linux.
 
 I am currently running Manjaro Linux with my desktop manager as KDE.
