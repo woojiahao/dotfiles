@@ -1,0 +1,9 @@
+{
+  "files": [
+    "src/MAIN_FILE"
+  ],
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "target": "es5"
+  }
+}
