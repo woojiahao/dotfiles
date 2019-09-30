@@ -18,3 +18,12 @@ function newdir {
   mkdir $1
   cd $1
 }
+
+# Sync all dotfiles
+# TODO: Use git bare to manage dotfiles
+function dsync {
+  cp ~/.spacemacs ~/dotfiles/emacs/.spacemacs
+  cp ~/.zshrc ~/dotfiles/.zshrc
+
+  cp -r ~/snippets ~/dotfiles/snippets
+}
