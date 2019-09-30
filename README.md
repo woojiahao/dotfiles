@@ -34,6 +34,12 @@ $ chmod +x ~/dotfiles/installers/wally/wally-setup
 $ sudo ~/dotfiles/installers/wally/wally-setup
 ```
 
+## Configurations
+### Spacemacs
+I use Spacemacs for normal text editing and web development, my `.spacemacs` configs can be found in `~/dotfiles/emacs/.spacemacs`.
+
+The `.spacemacs` configurations should be installed along with `arch-setup`.
+
 ## Loading commands
 In order to keep the shell files clean, commands/alias are loaded from the =/scripts= folder. To add these scripts, add the following command to the end of your =.bashrc= or =.zshrc=.
 

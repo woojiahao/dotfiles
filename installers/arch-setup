@@ -55,7 +55,7 @@ sudo gpasswd -a $USERNAME docker
 echo "Installing spacemacs and loading configuration"
 sudo pacman -S --noconfirm emac
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-cp -f .spacemacs ../.spacemacs
+cp -f ~/dotfiles/emacs/.spacemacs ~/.spacemacs
 
 # Install VirtualBox
 echo "Installing VirtaulBox"
