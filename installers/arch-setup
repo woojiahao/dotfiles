@@ -1,6 +1,6 @@
 #!/bin/bash
 # This is the installation script for all the software used for Manjaro
-# This function is to retrieve an AUR package and install it
+
 aur() {
   if [[ -z $1 ]]; then
     echo "At least one package must be provided"
@@ -56,6 +56,12 @@ echo "Installing spacemacs and loading configuration"
 sudo pacman -S --noconfirm emac
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 cp -f .spacemacs ../.spacemacs
+
+# Install VirtualBox
+echo "Installing VirtaulBox"
+uname -r
+pacman -S virtualbox
+gpassword -a $USERNAME vboxusers
 
 # Install all applicatons found in the AUR
 echo "Installing AUR packages"
