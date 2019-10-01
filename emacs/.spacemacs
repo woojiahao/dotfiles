@@ -68,19 +68,15 @@ This function should only modify configuration layer settings."
      tern
      lsp
    )
-   ;; List of additional packages that will be installed without being
-   ;; wrapped in a layer. If you need some configuration for these
-   ;; packages, then consider creating a layer. You can also put the
-   ;; configuration in `dotspacemacs/user-config'.
-   ;; To use a local version of a package, use the `:location' property:
-   ;; '(your-package :location "~/path/to/your-package/")
-   ;; Also include the dependencies as they will not be resolved automatically.
+
    dotspacemacs-additional-packages
-   '(atom-one-dark-theme)
-   ;; A list of packages that cannot be updated.
+   '(atom-one-dark-theme
+     elcord
+    )
+
    dotspacemacs-frozen-packages
    '(org-brain)
-   ;; A list of packages that will not be installed and loaded.
+
    dotspacemacs-excluded-packages
    '()
    ;; Defines the behaviour of Spacemacs when installing packages.
