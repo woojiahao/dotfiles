@@ -27,8 +27,8 @@ aur_download () {
 
 # Update packages first to prevent errors
 echo "Updating system..."
-sudo pacman -Syy
-sudo pacman -Su
+sudo pacman -Syy --noconfirm
+sudo pacman -Su --noconfirm
 
 # Install all applications compatible with pacman
 # Install essential packages
