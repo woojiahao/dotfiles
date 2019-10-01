@@ -1,6 +1,15 @@
 #!/bin/bash
 # Git commands - to be added on shell start
 
+# Display detailed version of git log
+alias log="git log --oneline --graph"
+
+# Quickly clone a project
+alias clone="git clone"
+
+# Display status of repository
+alias status="git status"
+
 # Merges master/origin and deletes local branch
 function merge-branch {
   git checkout master
@@ -8,6 +17,3 @@ function merge-branch {
   git merge origin/master
   git branch -d "$1"
 }
-
-# Display detailed version of git log
-alias log="git log --oneline --graph"
