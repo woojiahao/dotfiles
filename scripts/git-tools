@@ -10,6 +10,11 @@ alias clone="git clone"
 # Display status of repository
 alias status="git status"
 
+# Checkout a new branch
+function checkout {
+  git checkout -b $1
+}
+
 # Merges master/origin and deletes local branch
 function merge-branch {
   git checkout master
