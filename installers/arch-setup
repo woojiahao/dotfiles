@@ -72,7 +72,7 @@ sudo pacman -Rcns --noconfirm firefox
 
 # Copy code snippets folder to home
 echo "Adding code snippets"
-cp -r ~/dotfiles/snippets/ ~/snippets/
+cp -r ~/dotfiles/snippets/ ~/
 
 # Reboot OS
 sudo reboot
