@@ -25,5 +25,5 @@ function dsync {
   cp ~/.spacemacs ~/dotfiles/emacs/.spacemacs
   cp ~/.zshrc ~/dotfiles/.zshrc
 
-  cp -r ~/snippets ~/dotfiles/snippets
+  cp -r ~/snippets ~/dotfiles/
 }
