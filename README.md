@@ -40,11 +40,23 @@ I use Spacemacs for normal text editing and web development, my `.spacemacs` con
 
 The `.spacemacs` configurations should be installed along with `arch-setup`.
 
-## Loading commands
-In order to keep the shell files clean, commands/alias are loaded from the =/scripts= folder. To add these scripts, add the following command to the end of your =.bashrc= or =.zshrc=.
+### ZSH
+I use ZSH within my terminal due to the auto-completion features. The configurations are found in `~/dotfiles/.zshrc`.
 
-#+begin_src bash
-for file in ~/linux/scripts/#; do
-source $file
+I use the Oxide theme within ZSH, the official link to it can be found [here.](https://github.com/dikiaap/dotfiles/blob/master/.oh-my-zsh/themes/oxide.zsh-theme)
+
+## Loading commands
+In order to keep the shell files clean, commands/alias are loaded from the `/scripts` folder.
+
+To add these scripts, add the following command to the end of your `.bashrc` or `.zshrc`.
+
+```bash
+export LINUX_HOME=~/dotfiles
+export LINUX_SCRIPT=$LINUX_HOME/scripts
+export LINUX_EXPECT=$LINUX_SCRIPT/expect
+export SNIPPETS=~/snippets
+
+for file in $LINUX_SCRIPT/*; do
+  source $file
 done
-#+end_src
+```
