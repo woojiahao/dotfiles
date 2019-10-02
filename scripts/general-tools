@@ -16,7 +16,7 @@ alias clear-folder="rm -rf ./*"
 # Use pandoc to convert all Markdown files in a folder to org files
 function md-to-org {
   for f in ./*.md; do
-    name=$(basename $f .md)
+    local name=$(basename $f .md)
     pandoc -f markdown -t org -o $name.org ${f}
   done
 }
@@ -25,6 +25,59 @@ function md-to-org {
 function newdir {
   mkdir $1
   cd $1
+}
+
+# Backup a list of files to an external drive or another folder
+# TODO: Check if target drive has enough space or not
+function backup {
+  local destination_folder="$1"
+  if [[ -z $destination_folder ]]; then
+    echo "Provide a destination folder to backup files to"
+    return 1
+  elif [[ ! -d $destination_folder ]]; then
+    echo "Provide a valid destination folder path"
+    return 1
+  fi
+
+  local backups=(
+    "~/dotfiles/"
+    "~/Documents/"
+    "~/Downloads/"
+    "~/.emacs.d/"
+    "~/E-Books/"
+    "~/IdeaProjects/"
+    "~/Jia Hao/"
+    "~/.oh-my-zsh/"
+    "~/Pictures/"
+    "~/Projects/"
+    "~/PycharmProjects/"
+    "~/sicp-notes/"
+    "~/snippets/"
+    "~/Videos/"
+    "~/WebstormProjects/"
+    "~/.spacemacs"
+    "~/.zshrc"
+  )
+
+  local fixed_backups=()
+
+  for file in "${backups[@]}"; do
+    local mapped_file=$(echo "$file" | sed -r "s/~/\/home\/chill/g")
+    if [[ ! -e $mapped_file ]]; then
+      echo "$mapped_file does not exist in local file system"
+      return 1
+    fi
+    fixed_backups+=("$mapped_file")
+  done
+
+  local timestamp=$(date "+%d-%b-%Y_%H-%M")
+
+  local backup_folder="$destination_folder/$timestamp"
+  sudo mkdir $backup_folder
+
+  for file in "${fixed_backups[@]}"; do
+    sudo rsync -avPR --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
+  done
 }
 
 # Sync all dotfiles
