@@ -39,8 +39,6 @@ function backup {
     return 1
   fi
 
-  echo "Backing up files to $destination_folder"
-
   local backups=(
     "~/dotfiles/"
     "~/Documents/"
@@ -74,12 +72,11 @@ function backup {
 
   local timestamp=$(date "+%d-%b-%Y_%H-%M")
 
-  local backup_folder="$destintion_folder/$timestamp"
+  local backup_folder="$destination_folder/$timestamp"
   sudo mkdir $backup_folder
-  echo $backup_folder
 
   for file in "${fixed_backups[@]}"; do
-    # sudo rsync -avP --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
+    sudo rsync -avPR --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
   done
 }
 
