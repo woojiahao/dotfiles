@@ -3,8 +3,8 @@
 
 # Create new racket source file
 function newrkt {
-  racket-file="$1.rkt"
-  touch $racket-file
-  echo "#!/usr/bin/racket" >> $racket-file
-  echo "#lang racket" >> $racket-file
+  local racket_file="$1.rkt"
+  touch "$racket_file"
+  echo "#!/usr/bin/racket" >> $racket_file
+  echo "#lang racket" >> $racket_file
 }
