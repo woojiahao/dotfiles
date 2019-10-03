@@ -6,6 +6,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Modules
+zmodload zsh/mapfile
+
 # User configuration
 export EDITOR='vim'
 export LINUX_HOME=~/dotfiles
