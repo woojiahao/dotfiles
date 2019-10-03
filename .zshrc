@@ -19,6 +19,11 @@ export SNIPPETS=~/snippets
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Load the ~/.backup-list file if not present
+if [[ ! -e ~/.backup-list ]]; then
+  touch ~/.backup-list
+fi
+
 # Run all ~/linux/scripts scripts to be in shell scope
 for file in $LINUX_SCRIPT/*; do
   source $file
