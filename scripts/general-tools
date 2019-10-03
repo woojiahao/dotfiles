@@ -28,6 +28,7 @@ function newdir {
 }
 
 # Backup a list of files to an external drive or another folder
+# Reads list of files to backup from ~/.backup-list
 # TODO: Check if target drive has enough space or not
 function backup {
   local destination_folder="$1"
@@ -39,31 +40,14 @@ function backup {
     return 1
   fi
 
-  local backups=(
-    "~/dotfiles/"
-    "~/Documents/"
-    "~/Downloads/"
-    "~/.emacs.d/"
-    "~/E-Books/"
-    "~/IdeaProjects/"
-    "~/Jia Hao/"
-    "~/.oh-my-zsh/"
-    "~/Pictures/"
-    "~/Projects/"
-    "~/PycharmProjects/"
-    "~/sicp-notes/"
-    "~/snippets/"
-    "~/Videos/"
-    "~/WebstormProjects/"
-    "~/.spacemacs"
-    "~/.zshrc"
-  )
-
+  local home_path=$(echo ~)
+  local backup_file_path="$home_path/.backup-list"
+  local backups=$(cat $backup_file_path | cut -d$'\n' -f1)
   local fixed_backups=()
 
   for file in "${backups[@]}"; do
-    local mapped_file=$(echo "$file" | sed -r "s/~/\/home\/chill/g")
-    if [[ ! -e $mapped_file ]]; then
+    local mapped_file=$(echo "$file" | sed -r "s;~;$home_path;g")
+    if [[ ! -e "$mapped_file" ]]; then
       echo "$mapped_file does not exist in local file system"
       return 1
     fi
