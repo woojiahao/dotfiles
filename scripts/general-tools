@@ -42,16 +42,22 @@ function backup {
 
   local home_path=$(echo ~)
   local backup_file_path="$home_path/.backup-list"
-  local backups=$(cat $backup_file_path | cut -d$'\n' -f1)
-  local fixed_backups=()
+  local backups=()
 
-  for file in "${backups[@]}"; do
-    local mapped_file=$(echo "$file" | sed -r "s;~;$home_path;g")
-    if [[ ! -e "$mapped_file" ]]; then
-      echo "$mapped_file does not exist in local file system"
+  set -f
+  IFS='\n'
+  while read file; do
+    local modification=$(echo "$file" | sed -r "s;~;$home_path;g")
+    backups+=($modification)
+  done < $backup_file_path
+
+  for file in $backups; do
+    if [[ ! -e "$file" ]]; then
+      echo "$file does not exist in local file system"
+      set +f
+      unset IFS
       return 1
     fi
-    fixed_backups+=("$mapped_file")
   done
 
   local timestamp=$(date "+%d-%b-%Y_%H-%M")
@@ -59,9 +65,12 @@ function backup {
   local backup_folder="$destination_folder/$timestamp"
   sudo mkdir $backup_folder
 
-  for file in "${fixed_backups[@]}"; do
+  for file in $backups; do
     sudo rsync -avPR --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
   done
+
+  set +f
+  unset IFS
 }
 
 # Sync all dotfiles
