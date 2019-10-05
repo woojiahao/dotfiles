@@ -8,3 +8,5 @@ alias dkcon="docker container"
 alias dkimg="docker image"
 
 alias dkconls="docker container ls -a"
+
+alias dkimgls="docker image ls -a"
