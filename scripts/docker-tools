@@ -7,6 +7,20 @@ alias dkcon="docker container"
 # Short form for "docker image"
 alias dkimg="docker image"
 
+# List all containers (running and non-running)
 alias dkconls="docker container ls -a"
 
+# List all images
 alias dkimgls="docker image ls -a"
+
+# Prunes all containers that are not running
+alias dkconprune="docker container prune"
+
+# Prunes all images that are not a running service
+alias dkimgprune="docker image prune"
+
+# Starts a project with docker-compose.yml
+alias dkup="docker-compose up"
+
+# Stops a project with docker-compose.yml
+alias dkdown="docker-compose down"
