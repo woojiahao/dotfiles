@@ -6,3 +6,5 @@ alias dkcon="docker container"
 
 # Short form for "docker image"
 alias dkimg="docker image"
+
+alias dkconls="docker container ls -a"
