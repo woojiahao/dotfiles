@@ -61,7 +61,6 @@ function backup {
   done
 
   local timestamp=$(date "+%d-%b-%Y_%H-%M")
-
   local backup_folder="$destination_folder/$timestamp"
   sudo mkdir $backup_folder
 
