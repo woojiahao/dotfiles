@@ -42,6 +42,7 @@ This function should only modify configuration layer settings."
                  javascript-backend 'tern
                  js2-basic-offset 2
                  js-indent-level 2
+                 js2-strict-missing-semi-warning nil
                  node-add-modules-path t
                  js2-include-node-externs t)
      python
@@ -60,25 +61,15 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages
    '(org-brain)
 
-   dotspacemacs-excluded-packages
-   '()
-   ;; Defines the behaviour of Spacemacs when installing packages.
-   ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
-   ;; `used-only' installs only explicitly used packages and deletes any unused
-   ;; packages as well as their unused dependencies. `used-but-keep-unused'
-   ;; installs only the used packages but won't delete unused ones. `all'
-   ;; installs *all* packages supported by Spacemacs and never uninstalls them.
-   ;; (default is `used-only')
-   dotspacemacs-install-packages
-   'used-only))
+   dotspacemacs-excluded-packages '()
+
+   dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
   "Initialization:
 This function is called at the very beginning of Spacemacs startup,
 before layer configuration.
 It should only modify the values of Spacemacs settings."
-  ;; This setq-default sexp is an exhaustive list of all the supported
-  ;; spacemacs settings.
   (setq-default
    ;; If non-nil then enable support for the portable dumper. You'll need
    ;; to compile Emacs 27 from source following the instructions in file
