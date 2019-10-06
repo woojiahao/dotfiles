@@ -5,7 +5,19 @@
 alias log="git log --oneline --graph"
 
 # Quickly clone a project
-alias clone="git clone"
+# Accepts Git user (1) and project name (2) as arguments
+function clone {
+  user=$1
+  project=$2
+
+  if [[ -z $user || -z $project ]]; then
+    echo "Must provide Git user and project name"
+    return 1
+  fi
+
+  git clone git@github.com:$user/$project.git
+  cd $project
+}
 
 # Display status of repository
 alias status="git status"
