@@ -1,8 +1,11 @@
 #!/bin/bash
 # List of general commands - to be loaded on shell start
 
+# Colored ls command
+alias color-ls="ls -la --color"
+
 # Detailed ls command
-alias ls="ls -la --color"
+alias ls="color-ls | grep \"^d\" && color-ls | grep \"^-\" && color-ls | grep \"^l\""
 
 # Launch VS Code with scale factor forced
 alias code="code --force-device-scaled-factor=1.2"
