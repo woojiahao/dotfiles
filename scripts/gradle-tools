@@ -1,0 +1,5 @@
+#!/bin/bash
+# Gradle tools to be loaded on start up
+
+# Run the installDist command
+alias installDist="./gradlew installDist"
