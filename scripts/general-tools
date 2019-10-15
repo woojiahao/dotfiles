@@ -72,6 +72,8 @@ function backup {
   unset IFS
 }
 
+alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
+
 # Sync all dotfiles
 function dsync {
   cp ~/.spacemacs ~/dotfiles/emacs/.spacemacs
