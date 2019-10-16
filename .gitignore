@@ -1,3 +1,4 @@
 wally/firmware/
 *.el
 *.tex
+scripts/personal-tools
