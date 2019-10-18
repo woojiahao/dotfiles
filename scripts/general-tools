@@ -74,6 +74,8 @@ function backup {
 
 alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
 
+alias project="intel-virtual-output"
+
 # Sync all dotfiles
 function dsync {
   cp ~/.spacemacs ~/dotfiles/emacs/.spacemacs
