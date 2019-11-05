@@ -123,12 +123,7 @@ It should only modify the values of Spacemacs settings."
    ;; to `emacs-version'. (default 'emacs-version)
    dotspacemacs-elpa-subdirectory
    'emacs-version
-   ;; One of `vim', `emacs' or `hybrid'.
-   ;; `hybrid' is like `vim' except that `insert state' is replaced by the
-   ;; `hybrid state' with `emacs' key bindings. The value can also be a list
-   ;; with `:variables' keyword (similar to layers). Check the editing styles
-   ;; section of the documentation for details on available variables.
-   ;; (default 'vim)
+
    dotspacemacs-editing-style 'vim
    ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
@@ -161,15 +156,17 @@ It should only modify the values of Spacemacs settings."
    nil
 
    dotspacemacs-themes
-   '(spacemacs-dark
+   '(dracula
+     nord
+     spacemacs-dark
      doom-vibrant
      atom-one-dark)
 
    ;; Supported themes: `spacemacs', `all-the-icons', `custom', `doom',
    ;; `vim-powerline', `vanilla'
    dotspacemacs-mode-line-theme
-   '(vim-powerline :separator wave
-                   :separator-scale 1.0)
+   '(spacemacs :separator bar
+               :separator-scale 1.0)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -177,7 +174,7 @@ It should only modify the values of Spacemacs settings."
    t
 
    dotspacemacs-default-font '("Input Mono"
-                               :size 13.0
+                               :size 14.0
                                :width normal)
 
    dotspacemacs-leader-key
