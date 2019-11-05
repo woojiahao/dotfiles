@@ -3,6 +3,7 @@ export ZSH="/home/chill/.oh-my-zsh"
 ZSH_THEME="oxide"
 
 plugins=(git)
+# Add plugins for autocomplete and z
 
 source $ZSH/oh-my-zsh.sh
 
