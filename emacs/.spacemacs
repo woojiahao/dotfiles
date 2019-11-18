@@ -10,7 +10,6 @@ This function should only modify configuration layer settings."
 
    dotspacemacs-configuration-layers
    '(yaml
-     (auto-completion :variables auto-completion-enable-help-tooltip t)
      better-defaults
      emacs-lisp
      git
@@ -18,10 +17,6 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      org
-     (shell :variables
-            shell-default-height 40
-            shell-default-position 'bottom
-            shell-default-shell 'ansi-term)
      spell-checking
      syntax-checking
      treemacs
@@ -30,13 +25,22 @@ This function should only modify configuration layer settings."
      pdf
      racket
      latex
-     (typescript :variables
-                 typescript-backend 'tide
-                 tide-tsserver-executable "/usr/local/bin/tsserver")
      semantic
      search-engine
      colors
      shell-scripts
+     python
+     html
+     spotify
+     games
+     tern
+     lsp
+     docker
+     (auto-completion :variables auto-completion-enable-help-tooltip t)
+     (shell :variables
+            shell-default-height 40
+            shell-default-position 'bottom
+            shell-default-shell 'ansi-term)
      (javascript :variables
                  javascript-import-tool 'import-js
                  javascript-backend 'tern
@@ -45,14 +49,10 @@ This function should only modify configuration layer settings."
                  js2-strict-missing-semi-warning nil
                  node-add-modules-path t
                  js2-include-node-externs t)
-     python
-     html
-     spotify
-     games
-     tern
-     lsp
-     docker
-   )
+     (typescript :variables
+                 typescript-backend 'tide
+                 tide-tsserver-executable "/usr/local/bin/tsserver")
+     )
 
    dotspacemacs-additional-packages
    '(atom-one-dark-theme
