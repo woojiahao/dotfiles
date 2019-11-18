@@ -36,6 +36,7 @@ This function should only modify configuration layer settings."
      tern
      lsp
      docker
+     sql
      (auto-completion :variables auto-completion-enable-help-tooltip t)
      (shell :variables
             shell-default-height 40
