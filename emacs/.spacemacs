@@ -21,7 +21,6 @@ This function should only modify configuration layer settings."
      syntax-checking
      treemacs
      version-control
-     themes-megapack
      pdf
      racket
      latex
@@ -32,7 +31,6 @@ This function should only modify configuration layer settings."
      python
      html
      spotify
-     games
      tern
      lsp
      docker
@@ -57,7 +55,6 @@ This function should only modify configuration layer settings."
 
    dotspacemacs-additional-packages
    '(atom-one-dark-theme
-     nord-theme
     )
 
    dotspacemacs-frozen-packages
@@ -92,12 +89,9 @@ It should only modify the values of Spacemacs settings."
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-   dotspacemacs-elpa-https
-   t
-   ;; Maximum allowed time in seconds to contact an ELPA repository.
-   ;; (default 5)
-   dotspacemacs-elpa-timeout
-   5
+   dotspacemacs-elpa-https t
+
+   dotspacemacs-elpa-timeout 5
    ;; Set `gc-cons-threshold' and `gc-cons-percentage' when startup finishes.
    ;; This is an advanced option and should not be changed unless you suspect
    ;; performance issues due to garbage collection operations.
@@ -157,11 +151,11 @@ It should only modify the values of Spacemacs settings."
    nil
 
    dotspacemacs-themes
-   '(dracula
+   '(atom-one-dark
+     dracula
      nord
      spacemacs-dark
-     doom-vibrant
-     atom-one-dark)
+     doom-vibrant)
 
    ;; Supported themes: `spacemacs', `all-the-icons', `custom', `doom',
    ;; `vim-powerline', `vanilla'
@@ -171,15 +165,13 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
-   dotspacemacs-colorize-cursor-according-to-state
-   t
+   dotspacemacs-colorize-cursor-according-to-state t
 
    dotspacemacs-default-font '("Input Mono"
                                :size 14.0
                                :width normal)
 
-   dotspacemacs-leader-key
-   "SPC"
+   dotspacemacs-leader-key "SPC"
    ;; The key used for Emacs commands `M-x' (after pressing on the leader key).
    ;; (default "SPC")
    dotspacemacs-emacs-command-key
