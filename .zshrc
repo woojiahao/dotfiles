@@ -1,6 +1,6 @@
 export ZSH="/home/chill/.oh-my-zsh"
 
-ZSH_THEME="nanotech"
+ZSH_THEME="norm"
 
 plugins=(git)
 # Add plugins for autocomplete and z
