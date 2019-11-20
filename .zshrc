@@ -13,7 +13,7 @@ export LINUX_SCRIPT=$LINUX_HOME/scripts
 export LINUX_EXPECT=$LINUX_SCRIPT/expect
 export SNIPPETS=~/snippets
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370,bold,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
