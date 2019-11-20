@@ -451,6 +451,11 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(ansi-color-faces-vector
    [default bold shadow italic underline bold bold-italic bold])
+ '(atom-one-dark-custom-colors (quote (comment . "#555555")))
+ '(custom-enabled-themes (quote (atom-one-dark)))
+ '(custom-safe-themes
+   (quote
+    ("669e02142a56f63861288cc585bee81643ded48a19e36bfdf02b66d745bcc626" default)))
  '(evil-want-Y-yank-to-eol nil)
  '(fci-rule-character-color "#452E2E")
  '(fci-rule-color "#62686E")
