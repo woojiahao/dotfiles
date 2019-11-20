@@ -27,6 +27,12 @@ function newdir {
   cd $1
 }
 
+alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
+
+alias project="intel-virtual-output"
+
+alias sysupdate="yay -Syyu"
+
 # Backup a list of files to an external drive or another folder
 # Reads list of files to backup from ~/.backup-list
 # TODO: Check if target drive has enough space or not
@@ -71,12 +77,6 @@ function backup {
   set +f
   unset IFS
 }
-
-alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
-
-alias project="intel-virtual-output"
-
-alias sysupdate="yay -Syyu"
 
 # Sync all dotfiles
 function dsync {
