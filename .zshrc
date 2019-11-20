@@ -2,8 +2,7 @@ export ZSH="/home/chill/.oh-my-zsh"
 
 ZSH_THEME="oxide"
 
-plugins=(git zsh-z)
-# Add plugins for autocomplete and z
+plugins=(git zsh-z zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -13,6 +12,8 @@ export LINUX_HOME=~/dotfiles
 export LINUX_SCRIPT=$LINUX_HOME/scripts
 export LINUX_EXPECT=$LINUX_SCRIPT/expect
 export SNIPPETS=~/snippets
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370,bold,underline"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
