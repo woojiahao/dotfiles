@@ -13,6 +13,14 @@ alias sync="source ~/.zshrc"
 # Clears contents of a folder
 alias clear-folder="rm -rf ./*"
 
+alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
+
+alias project-screen="intel-virtual-output"
+
+alias sysupdate="yay -Syyu"
+
+alias open="ranger"
+
 # Use pandoc to convert all Markdown files in a folder to org files
 function md-to-org {
   for f in ./*.md; do
@@ -26,12 +34,6 @@ function newdir {
   mkdir $1
   cd $1
 }
-
-alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
-
-alias project="intel-virtual-output"
-
-alias sysupdate="yay -Syyu"
 
 # Backup a list of files to an external drive or another folder
 # Reads list of files to backup from ~/.backup-list
