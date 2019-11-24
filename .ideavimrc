@@ -1,2 +1,4 @@
 set showmode
 set clipboard+=unamed
+set visualbell
+set noerrorbells
