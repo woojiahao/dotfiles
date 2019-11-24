@@ -2,7 +2,12 @@ export ZSH="/home/chill/.oh-my-zsh"
 
 ZSH_THEME="oxide"
 
-plugins=(git zsh-z zsh-autosuggestions)
+plugins=(
+  git 
+  zsh-z 
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
