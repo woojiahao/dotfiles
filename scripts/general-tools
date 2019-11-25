@@ -21,6 +21,12 @@ alias sysupdate="yay -Syyu"
 
 alias open="ranger"
 
+function search {
+  path=$1
+  pattern=$2
+  grep -rnw $path -e $pattern
+}
+
 # Use pandoc to convert all Markdown files in a folder to org files
 function md-to-org {
   for f in ./*.md; do
