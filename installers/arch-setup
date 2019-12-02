@@ -42,7 +42,7 @@ sudo archlinux-java set java-11-openjdk
 
 # Install all the basic applications
 echo "Installing basic application"
-sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip noto-fonts-cjk expect spotify
+sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip noto-fonts-cjk expect
 
 # Set up Haskell
 sudo pacman -S ghc cabal-install stack haskell-haddock-library
@@ -68,7 +68,7 @@ gpassword -a $USERNAME vboxusers
 
 # Install all applicatons found in the AUR
 echo "Installing AUR packages"
-aur "yay" "google-chrome" "jetbrains-toolbox" "visual-studio-code-bin" "postman" "heroku-cli"
+aur "yay" "google-chrome" "jetbrains-toolbox" "visual-studio-code-bin" "postman" "heroku-cli" "spotify"
 
 echo "Clearing unused packages"
 sudo pacman -Rcns --noconfirm firefox
