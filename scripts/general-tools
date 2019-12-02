@@ -85,6 +85,7 @@ function dsync {
   cp ~/.spacemacs ~/dotfiles/emacs/.spacemacs
   cp ~/.zshrc ~/dotfiles/.zshrc
   cp ~/.ideavimrc ~/dotfiles/.ideavimrc
+  cp ~/.vimrc ~/dotfiles/.vimrc
 
   cp -r ~/snippets ~/dotfiles/
 }
