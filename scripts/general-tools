@@ -21,6 +21,8 @@ alias sysupdate="yay -Syyu"
 
 alias open="ranger"
 
+alias yay="yay --color=auto"
+
 # Use pandoc to convert all Markdown files in a folder to org files
 function md-to-org {
   for f in ./*.md; do
