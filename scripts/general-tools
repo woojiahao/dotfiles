@@ -73,6 +73,7 @@ function backup {
   local timestamp=$(date "+%d-%b-%Y_%H-%M")
   local backup_folder="$destination_folder/$timestamp"
   sudo mkdir $backup_folder
+  sudo chmod +rwx $backup_folder
 
   for file in $backups; do
     sudo rsync -avPR --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
