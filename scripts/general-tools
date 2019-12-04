@@ -76,7 +76,7 @@ function backup {
   sudo chmod +rwx $backup_folder
 
   for file in $backups; do
-    sudo rsync -avPR --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
+    sudo rsync -rltgoDvPR --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
   done
 
   set +f
