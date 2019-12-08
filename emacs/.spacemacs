@@ -56,12 +56,10 @@ This function should only modify configuration layer settings."
                  js2-include-node-externs t)
      (typescript :variables
                  typescript-backend 'tide
-                 tide-tsserver-executable "/usr/local/bin/tsserver")
-     )
+                 tide-tsserver-executable "/usr/local/bin/tsserver"))
 
    dotspacemacs-additional-packages
-   '(atom-one-dark-theme
-    )
+   '(atom-one-dark-theme)
 
    dotspacemacs-frozen-packages
    '(org-brain)
