@@ -171,8 +171,8 @@ It should only modify the values of Spacemacs settings."
    ;; (default t)
    dotspacemacs-colorize-cursor-according-to-state t
 
-   dotspacemacs-default-font '("Source Code Pro"
-                               :size 15.0
+   dotspacemacs-default-font '("Input Mono"
+                               :size 14.0
                                :width normal)
 
    dotspacemacs-leader-key "SPC"
