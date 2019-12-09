@@ -1,6 +1,6 @@
 export ZSH="/home/chill/.oh-my-zsh"
 
-ZSH_THEME="oxide"
+ZSH_THEME="lambda-mod"
 
 plugins=(
   git 
