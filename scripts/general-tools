@@ -23,6 +23,8 @@ alias open="ranger"
 
 alias yay="yay --color=auto"
 
+alias tldr="tldr -t ocean"
+
 # Use pandoc to convert all Markdown files in a folder to org files
 function md-to-org {
   for f in ./*.md; do
