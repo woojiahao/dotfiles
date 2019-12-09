@@ -42,7 +42,7 @@ sudo archlinux-java set java-11-openjdk
 
 # Install all the basic applications
 echo "Installing basic application"
-sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip noto-fonts-cjk expect gimp
+sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip noto-fonts-cjk expect gimp ranger
 
 # Set up Haskell
 sudo pacman -S ghc cabal-install stack haskell-haddock-library
@@ -65,6 +65,9 @@ echo "Installing VirtaulBox"
 uname -r
 pacman -S virtualbox
 gpassword -a $USERNAME vboxusers
+
+# Install tldr
+sudo npm install -g tldr
 
 # Install all applicatons found in the AUR
 echo "Installing AUR packages"
