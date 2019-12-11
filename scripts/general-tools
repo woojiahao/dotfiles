@@ -4,9 +4,6 @@
 # Detailed ls command
 alias ls="ls -la --color"
 
-# Launch VS Code with scale factor forced
-alias code="code --force-device-scaled-factor=1.2"
-
 # Syncs .zshrc to reload the utility scripts available
 alias sync="source ~/.zshrc"
 
@@ -17,11 +14,13 @@ alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
 
 alias project-screen="intel-virtual-output"
 
-alias sysupdate="yay -Syyu"
-
 alias open="ranger"
 
 alias yay="yay --color=auto"
+
+alias sysupdate="yay -Syyu"
+
+alias rollback="pacman -Suu"
 
 alias tldr="tldr -t ocean"
 
