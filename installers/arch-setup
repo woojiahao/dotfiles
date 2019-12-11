@@ -42,7 +42,7 @@ sudo archlinux-java set java-11-openjdk
 
 # Install all the basic applications
 echo "Installing basic application"
-sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip noto-fonts-cjk expect gimp ranger
+sudo pacman -S --noconfirm vim telegram-desktop libreoffice-still gimp noto-fonts-emoji discord xclip neofetch pandoc python-pip noto-fonts-cjk expect gimp ranger simple-scan
 
 # Set up Haskell
 sudo pacman -S ghc cabal-install stack haskell-haddock-library
