@@ -59,7 +59,8 @@ This function should only modify configuration layer settings."
                  tide-tsserver-executable "/usr/local/bin/tsserver"))
 
    dotspacemacs-additional-packages
-   '(atom-one-dark-theme)
+   '(atom-one-dark-theme
+     material-theme)
 
    dotspacemacs-frozen-packages
    '(org-brain)
