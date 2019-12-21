@@ -20,8 +20,6 @@ export SNIPPETS=~/snippets
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370"
 
-bindkey -v
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
