@@ -2,7 +2,7 @@
 # List of general commands - to be loaded on shell start
 
 # Detailed ls command
-alias ls="ls -la --color"
+alias ls="ls -lA --color"
 
 # Syncs .zshrc to reload the utility scripts available
 alias sync="source ~/.zshrc"
