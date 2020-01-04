@@ -1,8 +1,13 @@
 " vim-plug plugins
 call plug#begin('~/.vim/plugged')
 
+" Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
