@@ -12,13 +12,10 @@ let g:airline_theme='base16_gruvbox_dark_hard'
 filetype plugin indent on
 
 " Configure tabbing
-set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=2 shiftwidth=2 expandtab
 
 " Add relative line numbers
-set number
-set relativenumber
+set number relativenumber
 
 " Turn on syntax highlighting
 syntax on
