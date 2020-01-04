@@ -7,6 +7,8 @@ plugins=(
   zsh-z 
   zsh-autosuggestions
   zsh-syntax-highlighting
+  docker
+  heroku
 )
 
 source $ZSH/oh-my-zsh.sh
