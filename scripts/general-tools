@@ -90,7 +90,7 @@ function dsync {
   cp ~/.zshrc ~/dotfiles/.zshrc
   cp ~/.ideavimrc ~/dotfiles/.ideavimrc
   cp ~/.vimrc ~/dotfiles/.vimrc
-  cp ~/.config/ranger/rc.conf rc.conf
+  cp ~/.config/ranger/rc.conf ~/dotfiles/rc.conf
 
   cp -r ~/snippets ~/dotfiles/
 }
