@@ -25,6 +25,9 @@ set number relativenumber
 " Turn on syntax highlighting
 syntax on
 
+" Enable autoindent
+set autoindent
+
 " Toggle cursors for Konsole
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
