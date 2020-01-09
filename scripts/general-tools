@@ -91,6 +91,7 @@ function dsync {
   cp ~/.ideavimrc ~/dotfiles/.ideavimrc
   cp ~/.vimrc ~/dotfiles/.vimrc
   cp ~/.config/ranger/rc.conf ~/dotfiles/rc.conf
+  cp ~/.tmux.conf ~/dotfiles/.tmux.conf
 
   cp -r ~/snippets ~/dotfiles/
 }
