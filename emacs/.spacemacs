@@ -170,7 +170,7 @@ It should only modify the values of Spacemacs settings."
    ;; (default t)
    dotspacemacs-colorize-cursor-according-to-state t
 
-   dotspacemacs-default-font '("Input Mono"
+   dotspacemacs-default-font '("Fira Code"
                                :size 13.0
                                :width normal)
 
