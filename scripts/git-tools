@@ -2,7 +2,10 @@
 # Git commands - to be added on shell start
 
 # Display detailed version of git log
-alias log="git log --oneline --graph"
+alias log="git log --oneline --graph --all"
+
+# Display status of repository
+alias status="git status"
 
 # Quickly clone a project
 # Accepts Git user (1) and project name (2) as arguments
@@ -18,9 +21,6 @@ function clone {
   git clone git@github.com:$user/$project.git
   cd $project
 }
-
-# Display status of repository
-alias status="git status"
 
 # Checkout a new branch
 function checkout {
