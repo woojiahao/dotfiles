@@ -9,6 +9,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" Kotlin
+Plug 'udalov/kotlin-vim'
+
 call plug#end()
 
 " Configure airline theme
