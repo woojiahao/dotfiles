@@ -163,8 +163,8 @@ It should only modify the values of Spacemacs settings."
    ;; Supported themes: `spacemacs', `all-the-icons', `custom', `doom',
    ;; `vim-powerline', `vanilla'
    dotspacemacs-mode-line-theme
-   '(spacemacs :separator bar
-               :separator-scale 1.0)
+   '(vim-powerline :separator bar
+                   :separator-scale 1.0)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
