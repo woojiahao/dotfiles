@@ -25,18 +25,18 @@ alias rollback="pacman -Suu"
 alias tldr="tldr -t ocean"
 
 # Exports a markdown file to pdf using pandoc
-function export {
-  TARGET=[[ -z "$1" ]] && 'README.md' || "$1"
-  DESTINATION=[[ -z "$2" ]] && 'README.md' || "$2"
+function convert {
+  TARGET=$([[ -z "$1" ]] && echo 'README.md' || echo "$1")
+  DESTINATION=$([[ -z "$2" ]] && echo 'README.pdf' || echo "$2")
 
   echo "Exporting $TARGET to $DESTINATION"
 
   if [[ ! -f "float-adjustment.tex" ]]; then
-    echo '\usepackage{float}' > float-adjustment.tex
-    echo '\floatplacement{figure}{H}' >> float-adjustment.tex
+    echo '\\usepackage{float}' > float-adjustment.tex
+    echo '\\floatplacement{figure}{H}' >> float-adjustment.tex
   fi
 
-  pandoc --toc --variable linkcolor=blue -H float-adjustment.tex $TARGET -o $DESTINATION
+  pandoc $TARGET --toc -V linkcolor:blue -H float-adjustment.tex -o $DESTINATION
 
   rm float-adjustment.tex
 }
