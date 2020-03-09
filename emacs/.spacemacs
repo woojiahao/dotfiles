@@ -156,9 +156,8 @@ It should only modify the values of Spacemacs settings."
    nil
 
    dotspacemacs-themes
-   '(gruvbox-dark-soft
-     spacemacs-dark
-     sanityinc-tomorrow-eighties)
+   '(spacemacs-light
+     )
 
    ;; Supported themes: `spacemacs', `all-the-icons', `custom', `doom',
    ;; `vim-powerline', `vanilla'
