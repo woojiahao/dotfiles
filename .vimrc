@@ -15,7 +15,8 @@ Plug 'udalov/kotlin-vim'
 call plug#end()
 
 " Configure airline theme
-let g:airline_theme='base16_gruvbox_dark_hard'
+" let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_theme='xtermlight'
 
 filetype plugin indent on
 
