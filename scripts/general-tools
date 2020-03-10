@@ -50,7 +50,7 @@ function md-to-org {
 }
 
 # Create a new directory and cd into it
-function newdir {
+function mkcd {
   mkdir $1
   cd $1
 }
