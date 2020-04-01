@@ -12,6 +12,16 @@ Plug 'plasticboy/vim-markdown'
 " Kotlin
 Plug 'udalov/kotlin-vim'
 
+" Go
+Plug 'fatih/vim-go'
+
+" Others
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tomtom/tcomment_vim'
+
 call plug#end()
 
 " Configure airline theme
@@ -45,3 +55,7 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+" Keyboard shortcuts
+map <C-n> :NERDTreeToggle<CR>
+
