@@ -9,6 +9,7 @@ plugins=(
   zsh-syntax-highlighting
   docker
   heroku
+  golang
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -34,3 +35,5 @@ fi
 for file in $LINUX_SCRIPT/*; do
   source $file
 done
+
+source /usr/share/nvm/init-nvm.sh
