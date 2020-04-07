@@ -60,7 +60,8 @@ This function should only modify configuration layer settings."
                  tide-tsserver-executable "/usr/local/bin/tsserver"))
 
    dotspacemacs-additional-packages
-   '(color-theme-sanityinc-tomorrow
+   '(elcord
+     color-theme-sanityinc-tomorrow
      gruvbox-theme
      dracula-theme)
 
@@ -158,7 +159,8 @@ It should only modify the values of Spacemacs settings."
    nil
 
    dotspacemacs-themes
-   '(dracula
+   '(gruvbox-dark-soft
+     dracula
      spacemacs-light)
 
    ;; Supported themes: `spacemacs', `all-the-icons', `custom', `doom',
@@ -171,8 +173,8 @@ It should only modify the values of Spacemacs settings."
    ;; (default t)
    dotspacemacs-colorize-cursor-according-to-state t
 
-   dotspacemacs-default-font '("Fira Code"
-                               :size 13.0
+   dotspacemacs-default-font '("IBM Plex Mono"
+                               :size 14.0
                                :width normal)
 
    dotspacemacs-leader-key "SPC"
