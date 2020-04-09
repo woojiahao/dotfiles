@@ -2,7 +2,7 @@
  
 # Creates a bare Gatsby project without any start projects
 function gbare {
-  npm init
+  npm init -y
   npm install -s gatsby react react-dom
   mkdir src/ && cd src/
   mkdir pages/ && cd pages/
