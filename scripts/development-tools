@@ -1,0 +1,13 @@
+#!/bin/bash
+ 
+# Creates a bare Gatsby project without any start projects
+function gbare {
+  npm init
+  npm install -s gatsby react react-dom
+  mkdir src/ && cd src/
+  mkdir pages/ && cd pages/
+  touch index.js
+  echo 'import React from "react"\n' >> index.js
+  echo 'export default () => <h1>Hello Gatsby!</h1>' >> index.js
+  cd ../../
+}
