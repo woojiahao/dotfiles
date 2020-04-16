@@ -4,12 +4,14 @@ ZSH_THEME="lambda-mod"
 
 plugins=(
   git 
+  gitignore
   zsh-z 
   zsh-autosuggestions
   zsh-syntax-highlighting
   docker
   heroku
   golang
+  gatsby
 )
 
 source $ZSH/oh-my-zsh.sh
