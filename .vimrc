@@ -15,6 +15,12 @@ Plug 'udalov/kotlin-vim'
 " Go
 Plug 'fatih/vim-go'
 
+" Javascript & Web dev
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mattn/emmet-vim'
+
 " Others
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
