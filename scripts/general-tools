@@ -24,6 +24,8 @@ alias rollback="pacman -Suu"
 
 alias tldr="tldr -t ocean"
 
+alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash"
+
 # Exports a markdown file to pdf using pandoc
 function convert {
   TARGET=$([[ -z "$1" ]] && echo 'README.md' || echo "$1")
