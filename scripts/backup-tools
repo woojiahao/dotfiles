@@ -1,0 +1,53 @@
+#!/bin/bash
+
+function gsync {
+  local_folder=$1
+  remote_folder="google-drive:$2"
+  rclone copy --update --verbose --transfers 30 --checkers 8 --contimeout 60s --timeout 300s --retries 3 --low-level-retries 10 --stats 1s --exclude \".git/\" --exclude \"node_modules/\" $local_folder $remote_folder
+}
+
+# Backup a list of files to an external drive or another folder
+# Reads list of files to backup from ~/.backup-list
+# TODO: Check if target drive has enough space or not
+function backup {
+  local destination_folder="$1"
+  if [[ -z $destination_folder ]]; then
+    echo "Provide a destination folder to backup files to"
+    return 1
+  elif [[ ! -d $destination_folder ]]; then
+    echo "Provide a valid destination folder path"
+    return 1
+  fi
+
+  local home_path=$(echo ~)
+  local backup_file_path="$home_path/.backup-list"
+  local backups=()
+
+  set -f
+  IFS='\n'
+  while read file; do
+    local modification=$(echo "$file" | sed -r "s;~;$home_path;g")
+    backups+=($modification)
+  done < $backup_file_path
+
+  for file in $backups; do
+    if [[ ! -e "$file" ]]; then
+      echo "$file does not exist in local file system"
+      set +f
+      unset IFS
+      return 1
+    fi
+  done
+
+  local timestamp=$(date "+%d-%b-%Y_%H-%M")
+  local backup_folder="$destination_folder/$timestamp"
+  sudo mkdir $backup_folder
+  sudo chmod +rwx $backup_folder
+
+  for file in $backups; do
+    sudo rsync -rltgoDvPR --exclude=".git" --exclude="venv" --exclude="node_modules" $file $backup_folder
+  done
+
+  set +f
+  unset IFS
+}
