@@ -31,7 +31,8 @@ Plug 'tomtom/tcomment_vim'
 call plug#end()
 
 " Configure airline theme
-let g:airline_theme='base16_gruvbox_dark_hard'
+" let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_theme='onedark'
 " let g:airline_theme='xtermlight'
 
 filetype plugin indent on
