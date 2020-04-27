@@ -1,6 +1,10 @@
 #!/bin/bash
 # List of general commands - to be loaded on shell start
 
+function reve {
+  echo $1|rev
+}
+
 alias c="clear"
 
 # Detailed ls command
