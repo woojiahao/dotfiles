@@ -27,6 +27,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -48,6 +49,9 @@ syntax on
 
 " Enable autoindent
 set autoindent
+
+" Enable right margin
+set cc=120
 
 " Toggle cursors for Konsole
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
