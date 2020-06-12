@@ -18,13 +18,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 export EDITOR='vim'
+export EMACS='t'
 export LINUX_HOME=~/dotfiles
 export LINUX_SCRIPT=$LINUX_HOME/scripts
 export LINUX_EXPECT=$LINUX_SCRIPT/expect
 export SNIPPETS=~/snippets
-export GOPATH=$(go env GOPATH)/bin
 export GOTOOLDIR=$(go env GOTOOLDIR)
-export PATH=$PATH:$GOPATH
+export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:$GOTOOLDIR
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370"
