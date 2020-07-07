@@ -72,6 +72,7 @@ function dsync {
   cp ~/.vimrc ~/dotfiles/.vimrc
   cp ~/.config/ranger/rc.conf ~/dotfiles/rc.conf
   cp ~/.tmux.conf ~/dotfiles/.tmux.conf
+  cp ~/.config/fontconfig/ ~/dotfiles/fontconfig/
 
   cp -r ~/snippets ~/dotfiles/
 }
