@@ -23,9 +23,10 @@ export LINUX_HOME=~/dotfiles
 export LINUX_SCRIPT=$LINUX_HOME/scripts
 export LINUX_EXPECT=$LINUX_SCRIPT/expect
 export SNIPPETS=~/snippets
-export GOTOOLDIR=$(go env GOTOOLDIR)
-export PATH=$PATH:$(go env GOPATH)/bin
-export PATH=$PATH:$GOTOOLDIR
+export PATH="$PATH:$HOME/go/bin"
+# export GOTOOLDIR=$(go env GOTOOLDIR)
+# export PATH=$PATH:$(go env GOPATH)/bin
+# export PATH=$PATH:$GOTOOLDIR
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370"
 
@@ -43,3 +44,19 @@ for file in $LINUX_SCRIPT/*; do
 done
 
 source /usr/share/nvm/init-nvm.sh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/chill/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/chill/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/chill/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/chill/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
