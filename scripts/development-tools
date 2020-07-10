@@ -12,4 +12,4 @@ function gbare {
   cd ../../
 }
 
-alias xampp="/opt/lampp/lampp"
+alias xampp="sudo /opt/lampp/lampp"
