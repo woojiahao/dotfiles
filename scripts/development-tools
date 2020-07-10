@@ -11,3 +11,5 @@ function gbare {
   echo 'export default () => <h1>Hello Gatsby!</h1>' >> index.js
   cd ../../
 }
+
+alias xampp="/opt/lampp/lampp"
