@@ -28,6 +28,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'tomtom/tcomment_vim'
 Plug 'mhinz/vim-startify'
+Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -46,12 +48,14 @@ set number relativenumber
 
 " Turn on syntax highlighting
 syntax on
+colorscheme onedark
 
 " Enable autoindent
 set autoindent
 
 " Enable right margin
 set cc=120
+set textwidth=120 " Auto wrap text at 120 characters
 
 " Toggle cursors for Konsole
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
