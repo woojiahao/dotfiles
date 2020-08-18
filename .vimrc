@@ -53,6 +53,9 @@ colorscheme onedark
 " Enable autoindent
 set autoindent
 
+" Show matching braces
+set showmatch
+
 " Enable right margin
 set cc=120
 set textwidth=120 " Auto wrap text at 120 characters
