@@ -39,6 +39,9 @@ export BROWSER=/usr/bin/google-chrome-stable
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370"
 
+# Load pyenv
+eval '$(pyenv init -)'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
