@@ -38,7 +38,6 @@ This function should only modify configuration layer settings."
      java
      dap
      (python :variables
-             python-backend 'anaconda
              python-test-runner 'pytest
              python-format-on-save t
              python-sort-imports-on-save t)
