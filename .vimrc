@@ -30,13 +30,12 @@ Plug 'tomtom/tcomment_vim'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
+Plug 'dracula/vim', {'as': 'dracula'}
 
 call plug#end()
 
 " Configure airline theme
-" let g:airline_theme='base16_gruvbox_dark_hard'
-let g:airline_theme='onedark'
-" let g:airline_theme='xtermlight'
+let g:airline_theme='dracula'
 
 filetype plugin indent on
 
@@ -48,7 +47,8 @@ set number relativenumber
 
 " Turn on syntax highlighting
 syntax on
-colorscheme onedark
+" colorscheme onedark
+colorscheme dracula
 
 " Enable autoindent
 set autoindent
