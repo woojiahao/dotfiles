@@ -34,8 +34,6 @@ Plug 'dracula/vim', {'as': 'dracula'}
 
 call plug#end()
 
-" Configure airline theme
-let g:airline_theme='dracula'
 
 filetype plugin indent on
 
@@ -45,10 +43,14 @@ set tabstop=2 shiftwidth=2 expandtab
 " Add relative line numbers
 set number relativenumber
 
+" Configure airline theme
+let g:airline_theme='onedark'
+
+" colorscheme onedark
+colorscheme onedark
+
 " Turn on syntax highlighting
 syntax on
-" colorscheme onedark
-colorscheme dracula
 
 " Enable autoindent
 set autoindent
