@@ -44,10 +44,10 @@ set tabstop=2 shiftwidth=2 expandtab
 set number relativenumber
 
 " Configure airline theme
-let g:airline_theme='onedark'
+let g:airline_theme='dracula'
 
-" colorscheme onedark
-colorscheme onedark
+" colorscheme dracula
+colorscheme dracula
 
 " Turn on syntax highlighting
 syntax on
