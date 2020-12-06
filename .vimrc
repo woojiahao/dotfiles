@@ -21,6 +21,10 @@ Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mattn/emmet-vim'
 
+" Elixir
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'elixir-editors/vim-elixir'
+
 " Others
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -79,3 +83,4 @@ inoremap {;<CR> {<CR>};<ESC>O
 " Keyboard shortcuts
 map <C-n> :NERDTreeToggle<CR>
 
+let g:user_emmet_leader_key=','
