@@ -34,7 +34,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
-Plug 'dracula/vim', {'as': 'dracula'}
+" Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -48,13 +49,19 @@ set tabstop=2 shiftwidth=2 expandtab
 set number relativenumber
 
 " Configure airline theme
-let g:airline_theme='dracula'
+" let g:airline_theme='dracula'
 
-" colorscheme dracula
-colorscheme dracula
+set nocompatible
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 " Turn on syntax highlighting
 syntax on
+syntax enable
+
+" colorscheme dracula
+colorscheme nord
 
 " Enable autoindent
 set autoindent
