@@ -34,8 +34,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'mhinz/vim-startify'
 Plug 'sheerun/vim-polyglot'
 Plug 'airblade/vim-gitgutter'
-" Plug 'dracula/vim', {'as': 'dracula'}
-Plug 'arcticicestudio/nord-vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 call plug#end()
 
@@ -49,7 +48,7 @@ set tabstop=2 shiftwidth=2 expandtab
 set number relativenumber
 
 " Configure airline theme
-" let g:airline_theme='dracula'
+let g:airline_theme='onehalflight'
 
 set nocompatible
 if (has("termguicolors"))
@@ -60,8 +59,8 @@ endif
 syntax on
 syntax enable
 
-" colorscheme dracula
-colorscheme nord
+" Color scheme
+colorscheme onehalflight
 
 " Enable autoindent
 set autoindent
