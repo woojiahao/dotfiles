@@ -34,6 +34,8 @@ alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 
 alias upwatch="sudo sysctl -p"
 
+alias archivebox="docker run -v $PWD:/data -it -p 8000:8000 archivebox/archivebox server 0.0.0.0:8000"
+
 # Exports a markdown file to pdf using pandoc
 function convert {
   TARGET=$([[ -z "$1" ]] && echo 'README.md' || echo "$1")
