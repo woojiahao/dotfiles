@@ -56,7 +56,7 @@ for file in $LINUX_SCRIPT/*; do
   source $file
 done
 
-source /usr/share/nvm/init-nvm.sh
+# source /usr/share/nvm/init-nvm.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -79,3 +79,4 @@ unset __conda_setup
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="$HOME/.emacs.d/bin/:$PATH"
 export EMACS="emacs"
+source /usr/share/nvm/init-nvm.sh
