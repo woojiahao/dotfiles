@@ -5,6 +5,8 @@ function reve {
   echo $1|rev
 }
 
+alias sharpen="xrandr --output DP1 --auto"
+
 alias c="clear"
 
 # Detailed ls command
