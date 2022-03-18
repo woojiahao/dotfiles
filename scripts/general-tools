@@ -36,8 +36,6 @@ alias rr="curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 
 alias upwatch="sudo sysctl -p"
 
-alias archivebox="docker run -v $PWD:/data -it -p 8000:8000 archivebox/archivebox server 0.0.0.0:8000"
-
 alias uxplay="/usr/local/bin/uxplay"
 
 # Restart plasmashell
@@ -77,16 +75,11 @@ function mkcd {
   cd $1
 }
 
-
 # Sync all dotfiles
 function dsync {
-  cp ~/.spacemacs ~/dotfiles/emacs/.spacemacs
   cp ~/.zshrc ~/dotfiles/.zshrc
   cp ~/.ideavimrc ~/dotfiles/.ideavimrc
   cp ~/.vimrc ~/dotfiles/.vimrc
-  cp ~/.config/ranger/rc.conf ~/dotfiles/rc.conf
-  cp ~/.tmux.conf ~/dotfiles/.tmux.conf
 
   cp -r ~/.config/fontconfig/ ~/dotfiles/fontconfig/
-  cp -r ~/snippets ~/dotfiles/
 }
