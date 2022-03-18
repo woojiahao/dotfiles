@@ -1,8 +1,0 @@
-#+title: Vim Shortcut Reference
-* Vim Shortcuts
-** Basics
-   For basic navigation, we use the typical =hjkl= combination.
-   - =h= - left
-   - =j= - down
-   - =k= - up
-   - =l= - right
