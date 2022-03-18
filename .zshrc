@@ -33,6 +33,14 @@ export LINUX_EXPECT=$LINUX_SCRIPT/expect
 export SNIPPETS=~/snippets
 export PATH="$PATH:$HOME/go/bin"
 export BROWSER=/usr/bin/google-chrome-stable
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$PATH:/usr/bin/ruby/bin"
+export PATH="$PATH:/home/chill/.local/share/gem/ruby/3.0.0/bin"
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+
+eval "$(pyenv init --path)"
 # export GOTOOLDIR=$(go env GOTOOLDIR)
 # export PATH=$PATH:$(go env GOPATH)/bin
 # export PATH=$PATH:$GOTOOLDIR
@@ -41,7 +49,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#abb2bf,bg=#5c6370"
 
 # Load pyenv
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

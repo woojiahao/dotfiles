@@ -38,6 +38,14 @@ alias upwatch="sudo sysctl -p"
 
 alias archivebox="docker run -v $PWD:/data -it -p 8000:8000 archivebox/archivebox server 0.0.0.0:8000"
 
+alias uxplay="/usr/local/bin/uxplay"
+
+# Restart plasmashell
+alias rps="killall plasmashell && kstart5 plasmashell &> /dev/null"
+
+# Remove alias for Ghostscript and remap to gst
+alias gs="gst"
+
 # Exports a markdown file to pdf using pandoc
 function convert {
   TARGET=$([[ -z "$1" ]] && echo 'README.md' || echo "$1")
