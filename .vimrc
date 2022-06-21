@@ -37,6 +37,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'name': 'dracula' }
 
 call plug#end()
 
@@ -62,7 +63,7 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 syntax on
-colorscheme palenight
+colorscheme dracula
 
 " Enable autoindent
 set autoindent
@@ -90,6 +91,8 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap {;<CR> {<CR>};<ESC>O
+
+inoremap jk <Esc>
 
 " Keyboard shortcuts
 map <C-n> :NERDTreeToggle<CR>
