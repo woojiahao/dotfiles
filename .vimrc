@@ -39,6 +39,10 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'name': 'dracula' }
 
+" Java
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
+
 call plug#end()
 
 
@@ -98,4 +102,6 @@ inoremap jk <Esc>
 map <C-n> :NERDTreeToggle<CR>
 
 let g:user_emmet_leader_key=','
+
+set nofoldenable
 
