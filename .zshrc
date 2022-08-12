@@ -27,10 +27,11 @@ for file in ~/dotfiles/scripts/*; do
   source $file
 done
 
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH=$PATH:$(go env GOPATH)
 export PATH=$PATH:$(go env GOPATH)/bin
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
 
 alias python="python3"
+alias vim="nvim"
