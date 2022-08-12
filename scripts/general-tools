@@ -78,9 +78,9 @@ function mkcd {
 # Sync all dotfiles
 function dsync {
   cp ~/.zshrc ~/dotfiles/.zshrc
-  cp ~/.ideavimrc ~/dotfiles/.ideavimrc
+  # cp ~/.ideavimrc ~/dotfiles/.ideavimrc
   cp ~/.vimrc ~/dotfiles/.vimrc
-  cp ~/.config/nvim/init.vim
+  cp ~/.config/nvim/init.vim ~/dotfiles/.config/nvim/init.vim
 
-  cp -r ~/.config/fontconfig/ ~/dotfiles/fontconfig/
+  # cp -r ~/.config/fontconfig/ ~/dotfiles/fontconfig/
 }
