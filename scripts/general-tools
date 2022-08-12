@@ -80,6 +80,7 @@ function dsync {
   cp ~/.zshrc ~/dotfiles/.zshrc
   cp ~/.ideavimrc ~/dotfiles/.ideavimrc
   cp ~/.vimrc ~/dotfiles/.vimrc
+  cp ~/.config/nvim/init.vim
 
   cp -r ~/.config/fontconfig/ ~/dotfiles/fontconfig/
 }
