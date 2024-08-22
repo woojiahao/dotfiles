@@ -10,7 +10,7 @@ alias sharpen="xrandr --output DP1 --auto"
 alias c="clear"
 
 # Detailed ls command
-alias ls="ls -lA --color"
+alias ls="ls -A --color"
 
 # Syncs .zshrc to reload the utility scripts available
 alias sync="source ~/.zshrc"
@@ -22,7 +22,7 @@ alias bkup="~/IdeaProjects/backtup/build/install/backtup/bin/backtup"
 
 alias project-screen="intel-virtual-output"
 
-alias open="ranger"
+# alias open="ranger"
 
 alias yay="yay --color=auto"
 
@@ -70,7 +70,7 @@ function md-to-org {
 }
 
 # Create a new directory and cd into it
-function mkcd {
+function mkcd { 
   mkdir $1
   cd $1
 }
