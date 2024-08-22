@@ -38,6 +38,12 @@ Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', { 'name': 'dracula' }
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'arcticicestudio/nord-vim'
+
+" Java
+"Plug 'williamboman/nvim-lsp-installer'
+"Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 
@@ -51,7 +57,8 @@ set tabstop=2 shiftwidth=2 expandtab
 set number relativenumber
 
 " Configure airline theme
-" let g:airline_theme='onehalflight'
+" let g:airline_theme='catppuccin_mocha'
+let g:airline_theme='nord'
 
 set nocompatible
 
@@ -59,14 +66,12 @@ set nocompatible
 if has('termguicolors')
   set termguicolors
 endif
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+" let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 syntax on
-colorscheme dracula
-
-" Enable autoindent
-set autoindent
+" colorscheme catppuccin_mocha
+colorscheme nord
 
 " Show matching braces
 set showmatch
@@ -98,4 +103,6 @@ inoremap jk <Esc>
 map <C-n> :NERDTreeToggle<CR>
 
 let g:user_emmet_leader_key=','
+
+set nofoldenable
 
