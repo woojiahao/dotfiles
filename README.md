@@ -14,5 +14,4 @@ There are several key components to my setup:
 
 1. Neovim
 2. Zellij
-3. iTerm2
-4. Ergodox EZ
+3. Wezterm
