@@ -44,6 +44,7 @@ Plug 'arcticicestudio/nord-vim'
 " Java
 "Plug 'williamboman/nvim-lsp-installer'
 "Plug 'neovim/nvim-lspconfig'
+Plug 'ayu-theme/ayu-vim'
 
 call plug#end()
 
@@ -58,7 +59,8 @@ set number relativenumber
 
 " Configure airline theme
 " let g:airline_theme='catppuccin_mocha'
-let g:airline_theme='nord'
+"let g:airline_theme='catppuccin_mocha'
+"let g:airline_theme=''
 
 set nocompatible
 
@@ -70,8 +72,9 @@ endif
 " let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set background=dark
 syntax on
-" colorscheme catppuccin_mocha
-colorscheme nord
+colorscheme catppuccin_mocha
+" let ayucolor = "dark"
+" colorscheme ayu
 
 " Show matching braces
 set showmatch
