@@ -37,6 +37,7 @@ config.keys = {
 	{ mods = "OPT", key = "RightArrow", action = action.SendKey({ mods = "ALT", key = "f" }) },
 	{ mods = "CTRL", key = "-", action = action.DisableDefaultAssignment },
 	{ mods = "CTRL", key = "+", action = action.DisableDefaultAssignment },
+	{ mods = "OPT", key = "Enter", action = action.DisableDefaultAssignment },
 }
 config.window_close_confirmation = "NeverPrompt"
 
