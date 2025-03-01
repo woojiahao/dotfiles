@@ -41,9 +41,9 @@ keybinds clear-defaults=true {
         bind "7" { GoToTab 7; SwitchToMode "locked"; }
         bind "8" { GoToTab 8; SwitchToMode "locked"; }
         bind "9" { GoToTab 9; SwitchToMode "locked"; }
-        bind "[" { BreakPaneLeft; SwitchToMode "locked"; }
-        bind "]" { BreakPaneRight; SwitchToMode "locked"; }
-        bind "b" { BreakPane; SwitchToMode "locked"; }
+        // bind "[" { BreakPaneLeft; SwitchToMode "locked"; }
+        // bind "]" { BreakPaneRight; SwitchToMode "locked"; }
+        // bind "b" { BreakPane; SwitchToMode "locked"; }
         bind "h" { GoToPreviousTab; }
         bind "j" { GoToNextTab; }
         bind "k" { GoToPreviousTab; }
@@ -173,6 +173,21 @@ keybinds clear-defaults=true {
     shared_except "locked" "resize" "pane" "tab" "entersearch" "renametab" "renamepane" {
         bind "r" { SwitchToMode "resize"; }
     }
+    shared_except "locked" {
+      bind "Ctrl y" {
+          LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
+              floating true
+              ignore_case true
+              quick_jump true
+          }
+      }
+      bind "Ctrl f" {
+        LaunchOrFocusPlugin "file:~/.config/zellij/plugins/zellij_forgot.wasm" {
+            "LOAD_ZELLIJ_BINDINGS" "true"
+            floating true
+        }
+      }
+    }
     shared_among "scroll" "search" {
         bind "PageDown" { PageScrollDown; }
         bind "PageUp" { PageScrollUp; }
@@ -231,8 +246,17 @@ load_plugins {
 }
  
 simplified_ui true
+pane_frames false
+
+ui {
+  pane_frames {
+    hide_session_name true
+  }
+}
  
-theme "tokyo-night-dark"
+// theme "tokyo-night-dark"
+theme "catppuccin-mocha"
+// theme "gruvbox-dark"
  
 default_mode "locked"
  

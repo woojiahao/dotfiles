@@ -63,6 +63,7 @@ return {
       },
     },
     opts = {
+      debug = true,
       dependencies_bin = {
         tinymist = "tinymist",
       },

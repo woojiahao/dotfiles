@@ -4,19 +4,21 @@ local mux = wezterm.mux
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Tokyo Night"
+config.color_scheme = "Catppuccin Mocha"
 
-config.font = wezterm.font("SauceCodePro Nerd Font Propo", { weight = "Medium" })
-config.font_size = 14
+-- config.font = wezterm.font("SauceCodePro Nerd Font Propo", { weight = "Medium" })
+config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium" })
+config.font_size = 13
 config.background = {
 	{
 		source = {
-			File = "/Users/woojiahao/Pictures/Wallpapers/pexels-josh-hild-1270765-2777932.jpg",
+			-- File = "/Users/woojiahao/Pictures/Wallpapers/pexels-josh-hild-1270765-2777932.jpg",
+			File = "/Users/woojiahao/Pictures/Wallpapers/nyc.jpg",
 		},
 		height = "Cover",
 		vertical_align = "Middle",
 		hsb = {
-			brightness = 0.1,
+			brightness = 0.08,
 		},
 	},
 }
