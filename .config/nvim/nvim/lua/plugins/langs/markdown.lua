@@ -19,4 +19,32 @@ return {
       },
     },
   },
+  {
+    "jxnblk/vim-mdx-js",
+    {
+      "instant-markdown/vim-instant-markdown",
+      ft = { "markdown", "markdown.mdx", "mdx" },
+      build = "yarn install",
+      config = function()
+        vim.g.instant_markdown_autostart = 0
+      end,
+    },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      config = function()
+        local lspconfig = require("lspconfig")
+        local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
+        local capabilities = cmp_nvim_lsp.default_capabilities()
+
+        lspconfig["mdx_analyzer"].setup({
+          filetypes = { "markdown.mdx", "mdx" },
+          capabilities = capabilities,
+        })
+      end,
+    },
+  },
 }
