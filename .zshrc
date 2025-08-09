@@ -31,12 +31,17 @@ export PATH=$PATH:$HOME/.cargo/env
 export PATH=$PATH:"$HOMEBREW_PATH/Cellar/postgresql@15/15.5_3/bin"
 export PATH=$PATH:"$FLYCTL_INSTALL/bin"
 export PATH=$PATH:"$HOMEBREW_PATH/opt/qt@5/bin"
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PATH="$HOME/perl5/bin${PATH:+:${PATH}}"
+export PATH
 
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
+PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"
+export PERL5LIB
+PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"
+export PERL_LOCAL_LIB_ROOT
+PERL_MB_OPT="--install_base \"$HOME/perl5\""
+export PERL_MB_OPT
+PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"
+export PERL_MM_OPT
 
 export CPATH=$HOMEBREW_PATH/include
 export LIBRARY_PATH=$HOMEBREW_PATH/lib
@@ -52,6 +57,7 @@ export PKG_CONFIG_PATH=$HOMEBREW_PATH/opt/icu4c/lib/pkgconfig:"$PKG_CONFIG_PATH"
 
 alias python="python3"
 alias vim="nvim"
+alias gmy="gitmastery"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"

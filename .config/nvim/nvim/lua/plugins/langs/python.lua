@@ -44,6 +44,8 @@ local root_files = {
   ".git",
 }
 
+local util = require("lspconfig.util")
+
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
   pattern = { "*.py" },
   callback = function()
@@ -99,7 +101,7 @@ return {
           cmd = { "ruff", "server" },
           filetypes = { "python" },
           root_dir = (function()
-            return vim.fs.root(0, root_files)
+            return vim.fs.dirname(vim.fs.root(0, root_files))
           end)(),
           on_attach = function(client, _)
             if client.name == "ruff" then
@@ -125,7 +127,7 @@ return {
         basedpyright = {
           cmd = { "basedpyright-langsever", "--stdio" },
           filetypes = { "python" },
-          root_markers = root_files,
+          root_markers = util.root_pattern(unpack(root_files)),
           log_level = vim.lsp.protocol.MessageType.Debug,
           settings = {
             python = {
