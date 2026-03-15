@@ -7,7 +7,7 @@ vim.g.lazyvim_prettier_needs_config = true
 
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         "css-lsp",

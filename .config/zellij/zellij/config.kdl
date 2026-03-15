@@ -257,10 +257,13 @@ ui {
 // 
 simplified_ui true
  
-// Choose the theme that is specified in the themes section.
 // Default: default
+// Choose the theme that is specified in the themes section.
 // 
 theme "tokyo-night"
+// theme "kanagawa"
+// theme "catppuccin-mocha"
+// theme "gruvbox-dark"
  
 // Choose the base input mode of zellij.
 // Default: normal

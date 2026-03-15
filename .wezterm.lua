@@ -5,18 +5,16 @@ local mux = wezterm.mux
 local config = wezterm.config_builder()
 
 config.color_scheme = "Tokyo Night"
+-- config.color_scheme = "Kanagawa Dragon (Gogh)"
+-- config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Gruvbox dark, hard (base16)"
 
--- config.font = wezterm.font("SauceCodePro Nerd Font", { weight = "Medium" })
--- config.font_size = 15
--- config.font = wezterm.font("CaskaydiaMono Nerd Font", { weight = "Regular" })
-config.font = wezterm.font("ComicShannsMono Nerd Font", { weight = "Regular" })
-config.font_size = 16
+config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium" })
+config.font_size = 14
 config.background = {
 	{
 		source = {
-			-- File = "/Users/woojiahao/Pictures/Wallpapers/pexels-josh-hild-1270765-2777932.jpg",
-			File = "/Users/woojiahao/Pictures/Wallpapers/nyc.jpg",
-			-- File = "/Users/woojiahao/Pictures/Wallpapers/1351628.png",
+			File = "/Users/woojiahao/Pictures/Wallpapers/pexels-josh-hild-1270765-2777932.jpg",
 		},
 		height = "Cover",
 		vertical_align = "Middle",

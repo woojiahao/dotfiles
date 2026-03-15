@@ -53,11 +53,15 @@ export LDFLAGS="${LDFLAGS} -L$HOMEBREW_PATH/opt/icu4c/lib"
 export CPPFLAGS="${CPPFLAGS} -I$HOMEBREW_PATH/opt/icu4c/include"
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+export LDFLAGS="${LDFLAGS} -L$HOMEBREW_PATH/zlib/lib"
+export CPPFLAGS="${CPPFLAGS} -I$HOMEBREW_PATH/zlib/lib/include"
 export PKG_CONFIG_PATH=$HOMEBREW_PATH/opt/icu4c/lib/pkgconfig:"$PKG_CONFIG_PATH"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 alias python="python3"
 alias vim="nvim"
 alias gmy="gitmastery"
+alias lg='lazygit'
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -68,7 +72,11 @@ eval "$(jenv init -)"
 eval "$(/Users/woojiahao/.local/bin/mise activate zsh)"
 source <(fzf --zsh)
 
-if [[ -z "$ZELLIJ" ]]; then
+if [[ -z "$ZELLIJ" ]] &&
+  [[ "$TERM_PROGRAM" != "vscode" ]] &&
+  [[ -z "$JETBRAINS_INTELLIJ_ZSH_DIR" ]] &&
+  [[ -z "$JETBRAINS_IDE" ]]; then
+
   if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
     zellij attach -c
   else
@@ -81,3 +89,9 @@ if [[ -z "$ZELLIJ" ]]; then
 fi
 
 fortune | cowsay -f stegosaurus
+
+# Numeric development environment configuration
+# Added by Numeric onboarding script on 2026-01-08
+if [ -f "/Users/woojiahao/.numeric/.numericrc" ]; then
+  source "/Users/woojiahao/.numeric/.numericrc"
+fi
