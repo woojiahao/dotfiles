@@ -9,8 +9,9 @@ config.color_scheme = "Tokyo Night"
 -- config.color_scheme = "Catppuccin Mocha"
 -- config.color_scheme = "Gruvbox dark, hard (base16)"
 
-config.font = wezterm.font("FiraCode Nerd Font", { weight = "Medium" })
-config.font_size = 14
+-- config.font = wezterm.font("Iosevka Nerd Font", { weight = "Medium" })
+config.font = wezterm.font("InputMono Nerd Font", { weight = "Medium" })
+config.font_size = 13
 config.background = {
 	{
 		source = {

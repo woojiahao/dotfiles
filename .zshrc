@@ -74,6 +74,7 @@ source <(fzf --zsh)
 
 if [[ -z "$ZELLIJ" ]] &&
   [[ "$TERM_PROGRAM" != "vscode" ]] &&
+  [[ "$TERM_PROGRAM" != "zed" ]] &&
   [[ -z "$JETBRAINS_INTELLIJ_ZSH_DIR" ]] &&
   [[ -z "$JETBRAINS_IDE" ]]; then
 

@@ -1,17 +1,15 @@
 return {
-  "selimacerbas/mermaid-playground.nvim",
-  dependencies = { "barrett-ruth/live-server.nvim" },
-  config = function()
-    require("mermaid_playground").setup({
-      -- all optional; sane defaults shown
-      workspace_dir = nil, -- defaults to: $XDG_CONFIG_HOME/mermaid-playground
-      index_name = "index.html",
-      diagram_name = "diagram.mmd",
-      overwrite_index_on_start = false, -- don't clobber your customized index.html
-      auto_refresh = true,
-      auto_refresh_events = { "InsertLeave", "TextChanged", "TextChangedI", "BufWritePost" },
-      debounce_ms = 450,
-      notify_on_refresh = false,
-    })
-  end,
+  -- {
+  -- "selimacerbas/markdown-preview.nvim",
+  -- dependencies = { "selimacerbas/live-server.nvim" },
+  -- config = function()
+  --   require("markdown_preview").setup({
+  --     -- all optional; sane defaults shown
+  --     instance_mode = "takeover",  -- "takeover" (one tab) or "multi" (tab per instance)
+  --     port = 0,                    -- 0 = auto (8421 for takeover, OS-assigned for multi)
+  --     open_browser = true,
+  --     debounce_ms = 300,
+  --   })
+  -- end,
+  -- }
 }
