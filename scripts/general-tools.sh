@@ -48,6 +48,9 @@ function dsync {
   [ -f "$HOME/.ideavimrc" ] && cp ~/.ideavimrc ~/dotfiles/.ideavimrc
   [ -f "$HOME/.vimrc" ] && cp ~/.vimrc ~/dotfiles/.vimrc
   [ -f "$HOME/.wezterm.lua" ] && cp ~/.wezterm.lua ~/dotfiles/.wezterm.lua
+  [ -f "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty" ] &&
+    cp "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty" \
+      ~/dotfiles/config.ghostty
 
   mkdir -p ~/dotfiles/.config/{nvim,zellij}
   [ -d "$HOME/.config/nvim" ] && cp -r ~/.config/nvim ~/dotfiles/.config/nvim

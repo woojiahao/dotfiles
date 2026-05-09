@@ -1,0 +1,36 @@
+font-family = FiraCode Nerd Font
+font-style = Medium
+font-size = 14
+
+theme = TokyoNight
+
+background-image = /Users/woojiahao/Pictures/Wallpapers/pexels-josh-hild-1270765-2777932.jpg
+background-image-fit = cover
+background-image-position = center
+background-image-opacity = 0.15
+
+cursor-style = block
+cursor-style-blink = false
+
+copy-on-select = true
+
+# Hide tab bar when only one tab
+window-show-tab-bar = never
+
+# Disable ligatures (equivalent to harfbuzz calt=0)
+font-feature = -calt
+
+# Key mappings
+keybind = alt+left=text:\x1bb
+keybind = alt+right=text:\x1bf
+
+# Disable default bindings similar to wezterm config
+keybind = ctrl+-=unbind
+keybind = ctrl+=unbind
+keybind = alt+enter=unbind
+keybind = cmd+t=unbind
+
+macos-option-as-alt = true
+
+# Close without confirmation
+confirm-close-surface = false
